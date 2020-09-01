@@ -1,0 +1,12 @@
+{
+  "name": "WeatherForeCastApp",
+  "displayName": "WeatherForeCastApp",
+  "expo": {
+    "name": "WeatherForeCastApp",
+    "slug": "WeatherForeCastApp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
