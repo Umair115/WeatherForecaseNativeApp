@@ -10,18 +10,18 @@ export default class Footer extends Component {
                 <View style={styles.info}>
                 <View >
                         <View>
-                            <Text style={styles.infoheading}>Wind <Text style={styles.infotext} >23%</Text></Text>
+                            <Text style={styles.infoheading}>Wind                <Text style={styles.infotext} >{this.props.data.wind.speed}</Text></Text>
                         </View>   
                         <View>
-                            <Text style={styles.infoheading}>Wind <Text style={styles.infotext}>23%</Text></Text>
+                            <Text style={styles.infoheading}>Description     <Text style={styles.infotext}>{this.props.data.weather[0].description}</Text></Text>
                         </View>
                 </View>
                 <View >
                         <View>
-                            <Text style={styles.infoheading}>Wind <Text style={styles.infotext}>23%</Text></Text>
+                            <Text style={styles.infoheading}>Pressure     <Text style={styles.infotext}>{this.props.data.main.pressure}</Text></Text>
                         </View>   
                         <View>
-                            <Text style={styles.infoheading}>Wind <Text style={styles.infotext}>23%</Text></Text>
+                        <Text style={styles.infoheading}>Humidity     <Text style={styles.infotext}>{this.props.data.main.humidity}</Text></Text>
                         </View>
                 </View>
                 </View>
@@ -32,22 +32,26 @@ export default class Footer extends Component {
 
 var styles = StyleSheet.create({
     container : {
-        borderColor: "black",
-        borderWidth: 1,
+        // borderColor: "black",
+        // borderWidth: 1,
         borderRadius: 10,
         margin: 5,
-        backgroundColor: "yellow",
-        padding: 10
+        // backgroundColor: "yellow",
+        padding: 15
     },
     heading : {
         fontSize: 28,
-
+        color: 'black',
+        marginBottom: 10
     },
     infoheading:{
-        fontSize: 16
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: 'black'
     },
     infotext:{
-        fontSize: 14    
+        fontSize: 14,
+        fontWeight: 'normal'    
     },
     location : {
         textAlign: "center",
@@ -61,7 +65,7 @@ var styles = StyleSheet.create({
     info:{
         flexDirection: "row",
         justifyContent: "space-between",
-        paddingHorizontal: 40
+        // paddingHorizontal: 40
     }
     
 });

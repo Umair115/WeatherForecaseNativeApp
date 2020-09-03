@@ -4,10 +4,10 @@ import { Text, View, Image, StyleSheet } from 'react-native';
 export default class Card extends Component {
     render() {
         return (
-            <View style = {styles.container}>
-            <Text style={styles.heading}> Time  </Text>
-            <Image source={require('../../assets/sun.webp')} style={styles.image}></Image>
-            <Text style={styles.location}>Temprature</Text>
+            <View style = {{...styles.container,backgroundColor:this.props.color1}} >
+            <Text style={styles.heading}> {this.props.time}  </Text>
+            <Image source={{uri: `https://openweathermap.org/img/wn/${this.props.icon}@2x.png`}} style={styles.image}></Image>
+            <Text style={styles.location}>{Math.ceil(this.props.temp)}</Text>
         </View>
         );
     }
@@ -19,9 +19,8 @@ var styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 10,
         margin: 5,
-        backgroundColor: "yellow",
         width:120,
-        height:200
+        height:200,
     },
     heading : {
         fontSize: 18,

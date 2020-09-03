@@ -6,9 +6,9 @@ export default class Header extends Component {
         return (
             <View style = {styles.container}>
                 <Text style={styles.heading}>Weather Forecast </Text>
-                <Image source={require('../assets/sun.webp')} style={styles.image}></Image>
-                <Text style={styles.temprature}>Temprature</Text>
-                <Text style={styles.location}>Location</Text>
+                <Image source={{uri: `https://openweathermap.org/img/wn/${this.props.data[0].weather[0].icon}@2x.png`}} style={styles.image}></Image>
+                <Text style={styles.temprature}>{Math.ceil(this.props.data[0].main.temp)}</Text>
+                <Text style={styles.location}>{this.props.data[1].name}</Text>
             </View>
         );
     }
@@ -34,12 +34,14 @@ var styles = StyleSheet.create({
     },
     location : {
         textAlign: "center",
-        fontSize: 26
+        fontSize: 26,
+        
     },
     temprature: {
         fontSize: 48,
         textAlign: "center",
-        fontWeight: "bold"
+        fontWeight: "bold",
+        color: 'black'
     }
 
     

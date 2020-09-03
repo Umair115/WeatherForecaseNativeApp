@@ -5,9 +5,9 @@ export default class Content extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
+                <Card color1='green' time={(this.props.data[1].dt_txt).split(" ")[1]} temp={this.props.data[1].main.temp} icon={this.props.data[1].weather[0].icon}></Card>
+                <Card color1='red' time={(this.props.data[2].dt_txt).split(" ")[1]} temp={this.props.data[2].main.temp} icon={this.props.data[2].weather[0].icon}></Card>
+                <Card color1='blue' time={(this.props.data[3].dt_txt).split(" ")[1]} temp={this.props.data[3].main.temp} icon={this.props.data[3].weather[0].icon}></Card>
             </View>
         );
     }
